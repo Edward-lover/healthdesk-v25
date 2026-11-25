@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2e8b57"
+    >
+
+    <title>HealthDesk - Admin Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+
+    <header class="app-header">
+
+        <div class="brand">
+
+            <img
+                src="icon-192.png"
+                alt="HealthDesk Logo"
+                class="header-logo"
+            >
+
+            <div>
+
+                <h1>HEALTHDESK</h1>
+
+                <p>Clinic Administrator</p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="adminLogoutBtn"
+            class="logout-btn"
+            type="button"
+        >
+            Log Out
+        </button>
+
+    </header>
+
+
+
+    <main class="admin-container">
+
+        <h2>
+            Admin Dashboard
+        </h2>
+
+        <p>
+            Manage HealthDesk clinic activities.
+        </p>
+
+
+    
+        <section class="admin-stats">
+
+
+           
+
+            <div class="stat-card">
+
+                <span>
+                    Total Appointments
+                </span>
+
+                <strong id="adminTotal">
+                    0
+                </strong>
+
+            </div>
+
+
+       
+            <div class="stat-card">
+
+                <span>
+                    Pending
+                </span>
+
+                <strong id="adminPending">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <span>
+                    Approved
+                </span>
+
+                <strong id="adminApproved">
+                    0
+                </strong>
+
+            </div>
+
+
+        
+
+            <div class="stat-card">
+
+                <span>
+                    Completed
+                </span>
+
+                <strong id="adminCompleted">
+                    0
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+      
+
+        <section class="admin-section">
+
+            <h3>
+                Appointment Management
+            </h3>
+
+
+            <p>
+                Review and manage student clinic appointments.
+            </p>
+
+
+ 
+
+            <div
+                id="adminAppointmentsList"
+            >
+
+                <div class="appointment-card">
+
+                    <h3>
+                        Loading Appointments...
+                    </h3>
+
+                    <p>
+                        Please wait.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

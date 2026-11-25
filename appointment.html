@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2e8b57"
+    >
+
+    <title>HealthDesk - Book Appointment</title>
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="app-header">
+
+        <div class="brand">
+
+            <img
+                src="icon-192.png"
+                alt="HealthDesk Logo"
+                class="header-logo"
+            >
+
+            <div>
+
+                <h1>HEALTHDESK</h1>
+
+                <p>School Clinic</p>
+
+            </div>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a
+                href="appointments.html"
+                class="active"
+            >
+                My Appointments
+            </a>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+                type="button"
+            >
+                Log Out
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main class="form-page">
+
+        <section class="form-card">
+
+            <h2>Book an Appointment</h2>
+
+            <p class="subtitle">
+                Send your appointment request to the school clinic.
+            </p>
+
+
+            <form id="appointmentForm">
+
+
+                <label for="appointmentType">
+                    Appointment Type
+                </label>
+
+                <select
+                    id="appointmentType"
+                    required
+                >
+
+                    <option value="">
+                        Select appointment type
+                    </option>
+
+                    <option value="Public">
+                        Public
+                    </option>
+
+                    <option value="Private">
+                        Private
+                    </option>
+
+                </select>
+
+
+                <label for="appointmentDate">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="appointmentDate"
+                    required
+                >
+
+
+                <label for="appointmentTime">
+                    Time
+                </label>
+
+                <input
+                    type="time"
+                    id="appointmentTime"
+                    required
+                >
+
+
+                <label for="appointmentReason">
+                    Reason
+                </label>
+
+                <textarea
+                    id="appointmentReason"
+                    rows="5"
+                    placeholder="Enter the reason for your appointment"
+                    required
+                ></textarea>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        href="dashboard.html"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Send Appointment
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="appointmentMessage"
+                    class="message"
+                ></p>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
